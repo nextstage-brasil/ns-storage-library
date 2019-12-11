@@ -16,11 +16,8 @@ $nsStorageConfig = [
     'Local' => [
         'dir' => 'st' // em relação a path, com permissão de escrita
     ],
-    'S3' => [// Storage da AWS
-        'credentials' => [// obtido direto no console do S3 contratado
-            'key' => '',
-            'secret' => '',
-        ],
+    'S3' => [// Storage da AWS. Sobre credenciais: https://docs.aws.amazon.com/pt_br/sdk-for-php/v3/developer-guide/guide_credentials_profiles.html
+        'profile' => 'default', // nome do profile definido no arquivo ~/.aws/credentials
         'region' => 'us-east-2', // região do S3
         'SNS' => [// required to OCR 
             'RoleArn' => '', // O Amazon Resource Name (ARN) de uma função do IAM que concede permissões de publicação do Amazon Textract ao tópico Amazon SNS.
