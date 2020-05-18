@@ -1,5 +1,7 @@
 <?php
 
+use NsStorageLibrary\Util;
+
 namespace NsStorageLibrary;
 
 class Config {

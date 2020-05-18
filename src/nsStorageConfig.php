@@ -4,7 +4,7 @@
  * Arquivo de configuração do NsStorageLibrary
  * Importante: não altere o nome das variaveis
  */
-$nsBucketName = 'my_application'; // nome da pasta ou diretorio principal que ira comportar os arquivos
+$nsBucketName = 'my_application_bucket'; // nome da pasta ou diretorio principal que ira comportar os arquivos
 $nsBucketNamePublic = $nsBucketName; // Use o mesmo nome de bucketname para controlar somente por visibilidade, ou pasta separada caso queira
 $nsStorageConfig = [
     'url' => '', // url da aplicação, ex: https://www.meusite.com

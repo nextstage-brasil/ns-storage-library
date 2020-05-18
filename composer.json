@@ -13,10 +13,6 @@
         "smalot/pdfparser": "*"
     },
     "license": "MIT",
-    "require-dev": {
-        "phpunit/phpunit": "^8.4",
-        "phpspec/phpspec": "^6.0"
-    },
     "autoload": {
         "psr-4": {
             "NsStorageLibrary\\": "src/"

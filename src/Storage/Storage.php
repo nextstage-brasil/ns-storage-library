@@ -85,7 +85,7 @@ class Storage {
                     break;
                 default: // local
                     $path = $this->cfg->get('Local')['diretorio_local'] . ((strlen($config['pathPrefix'] > 0)) ? DIRECTORY_SEPARATOR . $config['pathPrefix'] : '');
-                    $adapter = new Local($path);
+                    $adapter = new Adapter\MyLocalAdapter($path);
                     break;
             }
             ////Log::logTxt('storage-create', __LINE__ . 'Criado adapter');
@@ -416,7 +416,7 @@ class Storage {
             $this->adapter->setBucket($bucket);
         } else {
             if ($this->adapterName !== 'GCP') {
-                throw new Exception('Erro ao selecionar o Bucket (Fn Not Found)');
+                throw new \Exception('Erro ao selecionar o Bucket (Fn Not Found)');
             }
             // por enquanto somente o GCP não tem esse método
             $storageClient = new StorageClient($this->config);
