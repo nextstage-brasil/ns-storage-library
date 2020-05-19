@@ -11,7 +11,7 @@ class MyLocalAdapter extends Local {
     private $path = '/ROOT/HOME';
     private $pathInit;
 
-    public function __construct($path) {       
+    public function __construct($path) {
         $this->path = $path;
         parent::__construct($path);
     }
@@ -19,6 +19,7 @@ class MyLocalAdapter extends Local {
     // Definição da pasta inicial
     public function setBucket($bucket) {
         $this->pathInit = $this->path . (($bucket) ? '/' . $bucket . '/' : '/');
+        $this->setPathPrefix($bucket);
     }
 
     public function getBucket() {
